@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Gallery</title>
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #FAF2E7;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(51, 51, 51, 0.7); /* Transparent */
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 80px 20px 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            background: url('background.jpg') center/cover;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Gallery */
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            max-width: 800px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Info Section */
+        .info-container {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .info-table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        .info-table th, .info-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .info-table th {
+            background-color: #ddd;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: rgba(128, 128, 128, 0.8);
+            text-align: center;
+            padding: 20px;
+            font-family: "Times New Roman", serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#info">Info</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Header -->
+    <div class="header" id="home">12TH2</div>
+
+    <!-- Gallery -->
+    <div class="gallery-container" id="gallery">
+        <div class="gallery">
+            <img src="number1.jpg" alt="Photo 1">
+            <img src="number2.jpg" alt="Photo 2">
+            <img src="number3.jpg" alt="Photo 3">
+            <img src="number4.jpg" alt="Photo 4">
+            <img src="number5.jpg" alt="Photo 5">
+            <img src="number6.jpg" alt="Photo 6">
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-container" id="info">
+        <h2>Class 12TH2 Student List</h2>
+        <table class="info-table">
+            <tr>
+                <th>STT</th>
+                <th>Họ tên</th>
+                <th>Giới tính</th>
+                <th>Ngày sinh</th>
+                <th>Lớp</th>
+                <th>Đơn vị</th>
+            </tr>
+            <tr><td>1</td><td>Đinh Thị Hải Anh</td><td>Nữ</td><td>06/12/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>2</td><td>Đỗ Thanh Đan Anh</td><td>Nữ</td><td>08/04/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>3</td><td>Trịnh Ngọc Hoàng Anh</td><td>Nữ</td><td>24/01/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>4</td><td>Nguyễn Khưu Gia Bảo</td><td>Nam</td><td>28/10/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>5</td><td>Nguyễn Minh Đức</td><td>Nam</td><td>07/01/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>6</td><td>Vũ Khánh Hà</td><td>Nữ</td><td>17/05/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>7</td><td>Huỳnh Quang Hưng</td><td>Nam</td><td>16/10/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>8</td><td>Nguyễn Nguyên Khang</td><td>Nam</td><td>02/10/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>9</td><td>Ngô Huỳnh Mai Khôi</td><td>Nữ</td><td>15/12/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>10</td><td>Phạm Đức Khôi</td><td>Nam</td><td>04/10/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>11</td><td>Dương Lê Minh Khuê</td><td>Nữ</td><td>23/03/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>12</td><td>Đinh Thọ Mai Lan</td><td>Nữ</td><td>24/10/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>13</td><td>Lê Nguyên Long</td><td>Nam</td><td>19/10/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>14</td><td>Hoàng Lê Minh</td><td>Nam</td><td>26/11/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>15</td><td>Lê Đinh Trí Minh</td><td>Nam</td><td>08/07/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>16</td><td>Từ Ngọc Hà My</td><td>Nữ</td><td>18/06/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>17</td><td>Lê Hoàng Nguyên</td><td>Nữ</td><td>26/05/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>18</td><td>Võ Hoàng Nguyên</td><td>Nam</td><td>17/10/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>19</td><td>Võ Ngọc Cát Phương</td><td>Nữ</td><td>05/10/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>20</td><td>Đoàn Minh Quân</td><td>Nam</td><td>07/12/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>21</td><td>Trần Hoàng Quân</td><td>Nam</td><td>28/02/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>22</td><td>Huỳnh Thái Sơn</td><td>Nam</td><td>25/10/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+        <tr><td>23</td><td>Nguyễn Duy Thắng</td><td>Nam</td><td>14/06/2007</td><td>12TH2</td><td>THPT Phú Nhuận</td></tr>
+    </table>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" id="contact">
+        <p>📞 Telephono: 0917876443</p>
+        <p>📧 Email: harryhuynhthai@gmail.com</p>
+        <p>❌ Don't try to contact me through social media tho</p>
+    </div>
+
+</body>
+</html>
